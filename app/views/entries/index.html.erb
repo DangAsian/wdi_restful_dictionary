@@ -1,0 +1,9 @@
+  <p>This is the entries index page</p>
+<% @entries.each do |entry|%>
+<ul>
+<li>
+<%= entry.word%>: <%= entry.definition%>| <%=entry.language%>
+</li>
+</ul>
+
+<% end %>
