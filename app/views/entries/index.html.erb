@@ -1,8 +1,10 @@
-  <p>This is the entries index page</p>
+  <h1>This is the entries index page</h1>
+  <%= link_to 'Add a new word', new_entry_path%>
 <% @entries.each do |entry|%>
 <ul>
 <li>
-<%= entry.word%>: <%= entry.definition%>| <%=entry.language%>
+<%= render 'entry', entry: entry%>
+| <%= link_to 'Show More', entry_path(entry)%>
 </li>
 </ul>
 

@@ -1,2 +1,2 @@
 <p>This is the id of the word: <%= params[:id]%></p>
-<%= @entry.word%>: <%= @entry.definition%> | <%= @entry.language %>
+<%= render 'entry', entry: @entry%>
